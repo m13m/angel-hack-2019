@@ -1,0 +1,123 @@
+.home {
+  display: flex;
+  height: 1440px;
+}
+
+.home .intro {
+  padding: 10px 10px 10px 10px;
+  width: 50%;
+  height: 100%;
+  background: #338aed;
+  color: white;
+  font-size: 60px;
+}
+
+.home .user {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+}
+
+.user .form {
+  width: 60%;
+  margin: 0 auto;
+  margin-top: 20%;
+  padding: 10px 10px 10px 18px;
+  height: auto;
+  box-shadow: 0 3px 8px 0 rgba(0,0,0,.12);
+  border:0.5px solid rgba(0,0,0,.12);
+  -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 2s; /* Firefox < 16 */
+   -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+       animation: fadein 2s;
+}
+
+.form .hack-name {
+  display: flex;
+  margin-top: 4px;
+}
+
+.hack-name icon {
+  width: 20%;
+}
+
+.hack-name img {
+  margin-top: 16px;
+}
+
+.hack-name .inp {
+  width:80%;
+  padding-left: 12px; 
+}
+
+.user .submit {
+  border-radius: 4px;
+  color: #338aed;
+  padding: 8px;
+  cursor: pointer;
+  width: 30%;
+  background: rgba(69,142,255,.2);
+  border: solid 1px #458eff;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 10px;
+  line-height: 1.43;
+}
+
+.header {
+  background: #338aed;
+  padding: 12px 12px 12px 12px;
+  width: 100%;
+  display: flex;
+  color: white
+}
+
+.header .title {
+  width:60%;
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.header .tabs {
+  display: flex;
+  width: 40%;
+}
+
+.tabs div {
+  width: 30%;
+  text-align: center;
+  padding: 4px;
+  height: 100%;
+  margin-right: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.active {
+  border-bottom: 1px solid white;
+}
+
+.my-masonry-grid {
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: -30px; /* gutter size offset */
+  width: auto;
+}
+.my-masonry-grid_column {
+  padding: 10px 10px 10px 10px; /* gutter size */
+  background-clip: padding-box;
+}
+
+.my-masonry-grid_column > div { /* change div to reference your elements you put in <Masonry> */
+  background: grey;
+  margin-bottom: 30px;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
