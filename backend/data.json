@@ -1,0 +1,58 @@
+[
+{
+"id": 1,
+"name": "maqbool",
+"email": "boo@baz.com",
+"github": "m13m",
+"linkedin": "maqboolism",
+"score": 0
+},
+{
+"id": 2,
+"name": "Ram",
+"email": "ram@ram.com",
+"github": "ram",
+"linkedin": "ram",
+"score": 0
+},
+{
+"id": 3,
+"name": "Sham",
+"email": "sham@sham.com",
+"github": "sham",
+"linkedin": "sham",
+"score": 0
+},
+{
+"id": 4,
+"name": "John",
+"email": "john@joh.com",
+"github": "john",
+"linkedin": "john",
+"score": 0
+},
+{
+"id": 5,
+"name": "Mariya",
+"email": "mariya@mariya.com",
+"github": "mariya",
+"linkedin": "mariya",
+"score": 0
+},
+{
+"id": 6,
+"name": "akash",
+"email": "akash@akash.com",
+"github": "akash",
+"linkedin": "akash",
+"score": 0
+},
+{
+"id": 7,
+"name": "sita",
+"email": "sita@sita.com",
+"github": "sita",
+"linkedin": "sita",
+"score": 0
+}
+]
