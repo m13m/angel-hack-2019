@@ -24,7 +24,10 @@ if (cluster.isMaster) {
 // Code to run if we're in a worker process
 } else {
 	const express = require('express')
+	const cors = require('cors')
 	const bodyParser = require('body-parser')
+
+	
 	let jsonData = require('./data.json')
 
 	const app = express()
@@ -37,6 +40,8 @@ if (cluster.isMaster) {
 	    extended: true,
 	  })
 	)
+	app.use(cors())
+
 
 	app.get('/', (request, response) => {
 	  response.json({ info: 'Hello, world!' })
