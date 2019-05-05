@@ -6,10 +6,22 @@ import getpass
 import requests
 from selenium.webdriver.common.keys import Keys
 import pprint
-def score(url_github,lang,url_linkedin):
-    #url1="https://github.com/kpulkit29"
-    url1=url_github
-    URL = url1+"?utf8=?&tab=repositories&q=&type=source&language="
+
+data_url = "http://anglehack-env.iva9jcc8nw.ap-south-1.elasticbeanstalk.com/all"
+
+def get_data_parse(data_url):
+	response  = requests.get(data_url)
+	json_data = response.json()
+	for x in range(len(json_data)):
+		github = json_data[x]['github']
+		linkedin = json_data[x]['linkedin']
+		score(github, linkedin)
+
+def score(github_username,lang,linkedin_username):
+    url_github ="https://github.com/" + github_username
+    url_linkedin="https://linkedin.com" + linkedin_username 
+
+    URL = url_github + "?utf8=?&tab=repositories&q=&type=source&language="
     r = requests.get(URL) 
     soup = BeautifulSoup(r.text)
     score=0
@@ -34,7 +46,7 @@ def score(url_github,lang,url_linkedin):
                     score=score+int(start.text)*5
 
 
-    URL = url1+"?tab=overview"
+    URL = url_linkedin+"?tab=overview"
     r = requests.get(URL) 
     soup = BeautifulSoup(r.text)
     w=soup.find('div',attrs={'class':'js-yearly-contributions'})
@@ -55,7 +67,7 @@ def score(url_github,lang,url_linkedin):
     
     
     
-    chrome_path = r'C:\Users\gulat\Downloads\chromedriver_win32 (2)\chromedriver.exe'
+    chrome_path = "/home/maqbool/.asdf/shims/chromedriver"
     driver = webdriver.Chrome(chrome_path)
     driver.get(url_linkedin)
     q=(driver.find_elements_by_class_name('date-range__duration-bullet'))
